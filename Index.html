@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="tag">LIVE WEATHER REPORT</p>
+      <h1>Weather Dashboard 🌦️</h1>
+      <p class="subtitle">Discover the weather in your city</p>
+    </header>
+
+    <form id="weatherForm">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name (e.g. Bapatla)"
+        maxlength="80"
+        required
+      >
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <p id="message" role="status"></p>
+
+    <section id="currentWeather" class="current-card"
+      aria-live="polite"></section>
+
+    <section id="forecastSection" hidden>
+      <h2>5-Day Forecast</h2>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+
+    <footer>
+      Weather data provided by Open-Meteo
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
