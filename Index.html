@@ -8,39 +8,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <header>
-      <p class="tag">LIVE WEATHER REPORT</p>
-      <h1>Weather Dashboard 🌦️</h1>
-      <p class="subtitle">Discover the weather in your city</p>
-    </header>
+  <div class="container">
+    <h1>🌤️ Weather Dashboard</h1>
+    <p>Check the weather in your city</p>
 
-    <form id="weatherForm">
-      <input
-        type="text"
-        id="cityInput"
-        placeholder="Enter city name (e.g. Bapatla)"
-        maxlength="80"
-        required
-      >
-      <button type="submit" id="searchBtn">Search</button>
-    </form>
+    <div class="search">
+      <input id="city" type="text" placeholder="Enter city name">
+      <button onclick="getWeather()">Search</button>
+    </div>
 
-    <p id="message" role="status"></p>
+    <p id="message"></p>
 
-    <section id="currentWeather" class="current-card"
-      aria-live="polite"></section>
+    <div id="weather" class="weather" hidden>
+      <h2 id="cityName"></h2>
+      <div id="icon"></div>
+      <h1 id="temperature"></h1>
+      <p id="description"></p>
+      <p id="details"></p>
+    </div>
 
-    <section id="forecastSection" hidden>
-      <h2>5-Day Forecast</h2>
-      <div id="forecast" class="forecast-grid"></div>
-    </section>
-
-    <footer>
-      Weather data provided by Open-Meteo
-    </footer>
-  </main>
+    <h2>5-Day Forecast</h2>
+    <div id="forecast" class="forecast"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
